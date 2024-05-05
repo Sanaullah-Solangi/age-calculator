@@ -15,6 +15,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 .ageCalculator {
   display: flex;
@@ -26,11 +28,11 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.ageCalculator > h1 {
+h1 {
   position: relative;
   width: fit-content;
 }
-.ageCalculator > h1:after {
+h1:after {
   content: "";
   position: absolute;
   bottom: -15%;
@@ -39,7 +41,7 @@ body {
   height: 5px;
   background-color: red;
 }
-.ageCalculator > h1:before {
+h1:before {
   content: "";
   position: absolute;
   bottom: -25%;
@@ -49,24 +51,19 @@ body {
   background-color: red;
 }
 
-.ageCalculator > label {
-  font-size: 1.5rem;
-  margin: 20px 0 0px;
-  display: inline-block;
-}
-.ageCalculator > label > input {
-  font-size: 1.5rem;
+.ageCalculator > #dob {
+  font-size: 1.2rem;
   padding: 5px 15px;
   text-transform: none;
-}
-
-#input {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: white;
 }
 
 .ageCalculator > p {
   font-size: 1.2rem;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,7 +73,7 @@ body {
   padding: 5px 10px;
 }
 
-.ageCalculator > p >span{
+.ageCalculator > p > span {
   font-weight: bold;
 }
 
@@ -90,4 +87,22 @@ body {
   padding: 5px 10px;
   margin-top: 10px;
   color: white;
+  cursor: pointer;
 }
+@media(width <= 510px){
+ .ageCalculator{
+  width: 100%;
+  padding: 5px ;
+ } 
+}
+
+@media(width <= 510px){
+  .ageCalculator{
+   width: 100%;
+   padding: 5px ;
+  } 
+
+.ageCalculator > p {
+  margin-top: 1PX;
+}
+ }
