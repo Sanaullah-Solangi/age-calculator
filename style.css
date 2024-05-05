@@ -69,10 +69,15 @@ body {
   font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.7);
   margin-top: 10px;
   color: black;
   padding: 5px 10px;
+}
+
+.ageCalculator > p >span{
+  font-weight: bold;
 }
 
 #btn {
