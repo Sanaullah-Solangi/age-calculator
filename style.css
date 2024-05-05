@@ -58,7 +58,6 @@ h1:before {
   text-align: center;
   border: none;
   outline: none;
-  color: white;
 }
 
 .ageCalculator > p {
@@ -89,20 +88,20 @@ h1:before {
   color: white;
   cursor: pointer;
 }
-@media(width <= 510px){
- .ageCalculator{
-  width: 100%;
-  padding: 5px ;
- } 
+@media (width <= 510px) {
+  .ageCalculator {
+    width: 100%;
+    padding: 5px;
+  }
 }
 
-@media(width <= 510px){
-  .ageCalculator{
-   width: 100%;
-   padding: 5px ;
-  } 
+@media (width <= 510px) {
+  .ageCalculator {
+    width: 100%;
+    padding: 5px;
+  }
 
-.ageCalculator > p {
-  margin-top: 1PX;
+  .ageCalculator > p {
+    margin-top: 1px;
+  }
 }
- }
