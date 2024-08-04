@@ -14,22 +14,30 @@ function calculate() {
   var now = new Date();
   var diff = now - dob;
 
-  var completeMilliseconds = diff;
-  var seconds = diff / 1000;
-  var minutes = diff / (1000 * 60);
-  var hours = diff / (1000 * 60 * 60);
-  var days = diff / (1000 * 60 * 60 * 24);
-  var months = diff / (1000 * 60 * 60 * 24 * 30);
-  var years = diff / (1000 * 60 * 60 * 24 * 30 * 12);
-  millisecondsOutput.innerHTML = Math.floor(completeMilliseconds);
+  let completeMilliseconds = diff;
+  let years = diff / (1000 * 60 * 60 * 24 * 30 * 12);
+  let months =
+    (diff % (1000 * 60 * 60 * 24 * 30 * 12)) / (1000 * 60 * 60 * 24 * 30);
+  let days = (diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24);
+  let hours = (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60);
+  let minutes = (diff % (1000 * 60 * 60)) / (1000 * 60);
+  let seconds = (diff % (1000 * 60)) / 1000;
+  let milliseconds = diff % (1000 * 60);
   secondsOutput.innerHTML = Math.floor(seconds);
   minutesOutput.innerHTML = Math.floor(minutes);
   hoursOutput.innerHTML = Math.floor(hours);
   daysOutput.innerHTML = Math.floor(days);
   monthsOutput.innerHTML = Math.floor(months);
   yearsOutput.innerHTML = Math.floor(years);
-
+  millisecondsOutput.innerHTML = Math.floor(milliseconds);
   output.innerHTML = `${Math.floor(years)} years, ${Math.floor(
     months
   )} Months & ${Math.floor(days)} days`;
 }
+
+userInput.addEventListener("keypress", (event) => {
+  if (event.code == "Enter") {
+    console.log(event.code);
+    calculate();
+  }
+});
